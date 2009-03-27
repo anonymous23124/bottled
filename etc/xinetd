@@ -1,17 +1,12 @@
-# default: off
-# description: Bottled is a famous 99 bottles mulththreadingi\
+# description: Bottled is a famous 99 bottles mulththreading\
 # task server.
-
-service bottled 
+service bottled
 {
-	disable	= yes
-	port			= 31337
-	max_load		= 3.5
-	socket_type		= stream
-	protocol		= tcp
-	wait			= no
-	user			= root
-	passenv			= PATH
-	server			= /usr/sbin/bottled
-#	bind			= 127.0.0.1
+    port		= 31337
+    socket_type		= stream
+    protocol		= tcp
+    wait		= no
+    user		= root
+    server		= /usr/local/sbin/bottled
+    server_args		= 99
 }

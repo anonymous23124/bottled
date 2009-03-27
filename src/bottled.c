@@ -43,6 +43,7 @@ int main(int argc, char **argv)
     if(printf(MESSAGE, counter, counter, wa_zero) != MSG_SIZE) {
       exit(EXIT_FAILURE);
     }
+    fflush(stdout);
     sleep(1);
     counter--;
   }

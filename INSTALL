@@ -1,0 +1,22 @@
+
+COMPILE
+	
+	make
+
+INSTALL 
+
+	sudo make install
+	
+After this ensure that bottled service enabled.
+
+	chkconfig bottled on
+
+Restart xinetd
+
+	sudo service xinetd restart
+
+or /etc/rc.d/xinetd restart (it depends on your *nix distribution).
+
+Check the server running
+
+	netstat -an | grep 31337

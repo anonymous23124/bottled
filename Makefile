@@ -19,6 +19,7 @@ test: bottled
 	@./bottled 3 >/dev/null
 	@echo Trivial test passed
 
+# FIXME: Appending in /etc/services without checking
 install: bottled
 	cp bottled /usr/local/sbin
 	cp etc/xinetd /etc/xinetd.d/bottled
